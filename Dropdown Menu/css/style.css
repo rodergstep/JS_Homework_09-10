@@ -1,0 +1,114 @@
+* {  
+	margin: 0;
+	padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+} 
+.wrapper {
+    width: 960px;
+    margin: 0 auto;
+    font-family: 'PT Sans', Tahoma, sans-serif;
+}
+
+nav {
+    background-color: #458b00;
+    padding: 10px 0;
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+}
+
+/* sub navigation */
+nav li ul {    
+    background-color: #66cd00;
+    position:absolute;
+    left:0;
+    top:40px; /* make this equal to the line-height of the links (specified below) */
+    width:200px;
+}
+nav li li {
+    position:relative;
+    margin:0;
+    display:block;
+}
+nav li li ul {
+    position:absolute;
+    top:0;
+    left:200px; /* make this equal to the width of the sub nav above */
+    margin:0;
+}
+
+
+/* style all links */
+nav a {
+    line-height:40px;
+    padding:0 12px;
+    margin:0 12px;
+}
+nav a {
+    color:#fff;
+    text-decoration:none;
+    display:block;
+}
+nav a:hover,
+nav a:focus,
+nav a:active {
+    color:rgb(50,50,50);
+}
+
+/* style sub level links */
+nav li li a {
+    border-bottom:solid 1px #fff;
+    margin:0 10px;
+    padding:0;
+}
+nav li li:last-child a {
+    border-bottom:none;
+}
+
+/* show arrows for dropdowns */
+nav li.dropdown > a {
+    background-image:url('../img/arrow-down.png');
+    background-position:right 20px;
+    background-repeat:no-repeat;
+}
+
+nav li li.dropdown > a {
+    background-image:url('../img/arrow-right.png');
+    background-position:right 16px;
+    background-repeat:no-repeat;
+}
+/* hide sub menu links */
+ul.sub-menu {
+    display:none;
+    transition: background-color 1s ease-out;
+
+}
+ul.sub-menu:hover {
+    background-color: #458b00;
+}
+
+                    /* jQueryUI */
+p {
+    padding: 10px;
+    font-size: 36px;
+    text-align: center;
+}
+
+.big {
+    background-color: #ccc;
+}
+
+.blue {
+    background-color: #7fff00;
+}
+
+.box {
+    padding: 20px;
+    text-align: center;
+    color: #ccc;
+    font-size: 36px;
+}
